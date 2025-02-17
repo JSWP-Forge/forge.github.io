@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --detail-color: #A020F0;
+  --titles-color: #111111;
+  --subtitles-color: #2E2E2E;
+  --texts-color: #595959;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url('/img/noise.png');
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  pointer-events: none; 
+  z-index: 9999;
+}
+
+.maintitles span, .maintitlessmall span {
+  color: var(--detail-color);
+}

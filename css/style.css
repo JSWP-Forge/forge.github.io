@@ -1,0 +1,12 @@
+/* utilidades e estilos globais */
+@import './global.css';
+@import '/utilidades/componentes.css';
+@import './animations.css';
+
+/* estilos principais */
+@import './header.css';
+@import './introduction.css';
+@import './projects.css';
+@import './projectsmodal.css';
+@import './footer.css';
+

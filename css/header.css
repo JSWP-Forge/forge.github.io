@@ -1,0 +1,161 @@
+.header-bg {
+  position: sticky;
+  top: 0px;
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background: rgba(255, 255, 255, .8);
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+}
+
+.header-marca {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.header-marca-nome {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-marca-nome span {
+  color: var(--detail-color);
+}
+
+.header-all-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu-item a {
+  position: relative;
+  color: #595959;
+}
+
+.header-menu-item a:hover {
+  color: #2E2E2E;
+}
+
+.header-menu-item a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: var(--detail-color);
+  transition: 0.3s;
+}
+
+.header-menu-item a:hover::after,
+.header-menu-item a.selectedLink::after {
+  width: 100%;
+}
+
+.header-socialmedias {
+  position: relative;
+  display: flex;
+  gap: 12px;
+}
+
+.header-socialmedias::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  height: 20px;
+  width: 2px;
+  background-color: #EAEAEA;
+}
+
+.header-socialmedias a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-socialmedias img {
+  height: 18px;
+}
+
+.white-button:hover {
+  color: #2E2E2E;
+  border: 1px solid #2E2E2E;
+}
+
+.black-button:hover {
+  background: black;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .header-bg {
+    border-bottom: none;
+    background: white;
+  }
+
+  .header {
+    font-size: 1.1rem;
+  }
+
+  .header-menu-item a {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-socialmedias::before {
+    display: none;
+  }
+
+  .header-all-links {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    height: 0px;
+    width: 100%;
+    background: white;
+    transition: 0.5s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  
+  .header-all-links.active {
+    height: calc(100vh - 60px);
+    visibility: visible;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
