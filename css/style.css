@@ -1,6 +1,6 @@
 /* utilidades e estilos globais */
 @import './global.css';
-@import './utilidades/componentes.css';
+@import '../utilidades/componentes.css';
 @import './animations.css';
 
 /* estilos principais */
