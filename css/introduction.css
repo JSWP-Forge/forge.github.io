@@ -1,12 +1,15 @@
 .introduction {
   display: grid;
-  place-content: center;
-  grid-template-columns: 1fr auto;
-  height: 80vh;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
+  height: 60vh;
 }
 
-.introduction-textbox {
+.introduction-whoami {
+  align-self: center;
+}
+
+.introduction-whatdoido {
   align-self: center;
 }
 
@@ -29,7 +32,7 @@
   display: block;
   font-family: 'Poppins', sans-serif;
   color: var(--texts-color);
-  max-width: 650px;
+  /* max-width: 650px; */
   font-size: 1.1rem;
 }
 
@@ -53,6 +56,20 @@
 }
 
 @media (max-width: 900px) {
+  .introduction {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .introduction-whoami {
+    align-self: end;
+  }
+  
+  .introduction-whatdoido {
+    align-self: flex-start;
+  }
+
   .introduction-textbox h1 {
     font-size: 2.5rem;
   }
@@ -64,32 +81,15 @@
   .introduction-quote {
     font-size: 0.875rem;
   }
-
-  .introduction-illustration img {
-    height: 340px;
-    width: 340px;
-  }
 }
 
 @media (max-width: 800px) {
-  .introduction {
-    height: 60vh;
-  }
-
   .introduction-subtitle {
     font-size: 1.3rem;
   }
 
   .introduction-quote {
     font-size: 1rem;
-  }
-
-  .introduction-illustration img {
-    display: none;
-  }
-
-  .introduction-textbox {
-    justify-content: center;
   }
 }
 

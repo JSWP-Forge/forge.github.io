@@ -1,20 +1,15 @@
 export default function initOpeningAnimation() {
   const containers = document.querySelectorAll('.js-scroll')
-  const windowHalf = window.innerHeight * 0.6
 
   if (containers.length) {
     function animateWebsiteOpening() {
-      containers.forEach(container => {
-        const containerTop = container.getBoundingClientRect().top - windowHalf
-
-        if (containerTop < 0) {
+      containers.forEach((container, index) => {
+        setTimeout(() => {
           container.classList.add('animate')
-        }
+        }, 400 * index)
       })
     }
 
     animateWebsiteOpening()
-
-    window.addEventListener('scroll', animateWebsiteOpening)
   }
 }
